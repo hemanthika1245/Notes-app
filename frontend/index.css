@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e1b4b,#312e81);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+/* Title */
+
+h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:15px;
+    background:linear-gradient(90deg,#00F5A0,#00D9F5,#8B5CF6,#FF4D9D);
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:gradient 6s infinite;
+}
+
+@keyframes gradient{
+
+0%{
+background-position:0%;
+}
+
+50%{
+background-position:100%;
+}
+
+100%{
+background-position:0%;
+}
+
+}
+
+/* Quote */
+
+.quote{
+
+text-align:center;
+color:#cbd5e1;
+font-size:17px;
+font-style:italic;
+margin-bottom:30px;
+line-height:1.7;
+
+}
+
+/* Form */
+
+.form{
+
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(18px);
+box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+}
+
+/* Inputs */
+
+input,
+textarea{
+
+width:100%;
+padding:14px;
+margin-bottom:18px;
+border:none;
+outline:none;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+color:white;
+font-size:16px;
+transition:.3s;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+color:#cbd5e1;
+
+}
+
+input:focus,
+textarea:focus{
+
+border:1px solid #8b5cf6;
+box-shadow:0 0 12px rgba(139,92,246,.5);
+
+}
+
+textarea{
+
+height:110px;
+resize:none;
+
+}
+
+/* Button */
+
+button{
+
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#8b5cf6,#6366f1);
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* Search */
+
+#search{
+
+margin-top:20px;
+
+}
+
+/* Heading */
+
+h2{
+
+color:white;
+margin:35px 0 20px;
+
+}
+
+/* Notes */
+
+#notesContainer{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:20px;
+
+}
+
+.note{
+
+background:rgba(255,255,255,.10);
+border-left:5px solid #8b5cf6;
+padding:20px;
+border-radius:15px;
+color:white;
+transition:.3s;
+
+}
+
+.note:hover{
+
+transform:translateY(-5px);
+
+}
+
+.note h3{
+
+color:#d8b4fe;
+margin-bottom:10px;
+
+}
+
+.note p{
+
+color:#e5e7eb;
+line-height:1.6;
+
+}
+
+.note button{
+
+width:auto;
+padding:8px 18px;
+margin-top:15px;
+margin-right:10px;
+font-size:14px;
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+max-width:100%;
+
+}
+
+h1{
+
+font-size:34px;
+
+}
+
+.form{
+
+padding:20px;
+
+}
+
+#notesContainer{
+
+grid-template-columns:1fr;
+
+}
+
+}
